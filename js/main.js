@@ -18,7 +18,7 @@ require.config({
 });
 
 define(
-  
+
 // MODULE NAME
   'main',
 
@@ -32,7 +32,7 @@ define(
 
 // CALLBACK
   function main ( DOM, ANIMATOR, CONTROLS, DISPLAY ) {
-    
+
     var experimentNumber,
         experiment_ID
         ;
@@ -51,7 +51,7 @@ define(
     }
     else {
 
-      var experiments = [ 1, 2, 3 ],
+      var experiments = [ 1, 2, 3, 4 ],
           container = document.querySelector('[role=main]'),
           ul        = document.createElement('ul')
           ;

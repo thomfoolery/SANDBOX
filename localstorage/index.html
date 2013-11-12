@@ -1,0 +1,50 @@
+<html>
+<head>
+    <title>Check-in proof of concept</title>
+</head>
+<body>
+
+    <h1>
+        Check-in proof of concept
+    </h1>
+
+    <ol>
+        <li>
+            <label for="check-in-1"><a href="1.html">Check-in</a></label>
+            <input type="checkbox" id="check-in-1" name="check-in-1" disabled />
+        </li>
+        <li>
+            <label for="check-in-2"><a href="2.html">Check-in</a></label>
+            <input type="checkbox" id="check-in-2" name="check-in-2" disabled />
+        </li>
+        <li>
+            <label for="check-in-3"><a href="3.html">Check-in</a></label>
+            <input type="checkbox" id="check-in-3" name="check-in-3" disabled />
+        </li>
+    </ol>
+
+    <a href="#" class="clear-loacalstorage">Clear</a>
+
+
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.0/jquery-ui.min.js"></script>
+    <script>window.jQuery    || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+    <script>window.jQuery.ui || document.write('<script src="js/vendor/jquery-ui-1.9.0.custom.min.js"><\/script>')</script>
+
+    <script>
+
+        $('[type=checkbox]').each( function ( index, input ) {
+            var $target = $( input );
+            console.log( localStorage.getItem( $target.attr('id') ) );
+            $target.attr('checked', JSON.parse( localStorage.getItem( $target.attr('id') ) ) );
+        });
+
+        $('.clear-loacalstorage').click( function ( e ) {
+            localStorage.clear();
+            window.location.reload();
+        });
+
+    </script>
+</body>
+</html>

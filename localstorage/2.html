@@ -1,0 +1,32 @@
+<html>
+<head>
+    <title>Check-in 2</title>
+</head>
+<body>
+
+    <h1>Check-in 2</h1>
+    <label for="check-in-2">Checked-in</label>
+    <input type="checkbox" id="check-in-2" name="check-in-2" disabled/>
+
+    <p>
+        <a href="index.html">Back</a>
+    </p>
+
+
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.0/jquery-ui.min.js"></script>
+    <script>window.jQuery    || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+    <script>window.jQuery.ui || document.write('<script src="js/vendor/jquery-ui-1.9.0.custom.min.js"><\/script>')</script>
+
+    <script>
+
+        $('[type=checkbox]').each( function ( index, input ) {
+            var $target = $( input );
+            $target.attr('checked', true );
+            localStorage.setItem( $target.attr('id'), true );
+        });
+
+    </script>
+</body>
+</html>
